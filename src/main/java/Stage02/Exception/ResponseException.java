@@ -1,0 +1,18 @@
+package Stage02.Exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(HttpStatus.BAD_REQUEST)
+public class ResponseException extends RuntimeException{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	String error;
+	
+	public ResponseException(String error) {
+		super(error);
+	}
+}
